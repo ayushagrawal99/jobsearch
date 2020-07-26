@@ -1,0 +1,40 @@
+*{
+    a:hover{
+        text-decoration: none !important;
+    }
+    i:hover{
+        cursor: pointer !important;
+    }
+}
+.tglcls{
+    display: none;
+}
+.sidebar{
+    width: 16%;
+    .navigation{
+        width: 100%;
+        a:hover{
+            background-color: lightgray !important;
+            border-radius: 5px !important;
+        }
+    }
+
+}
+@media only screen and (max-width: 420px){
+    header{
+        div{
+            font-size: 17px !important;
+            i{
+            font-size: 20px !important;
+            }
+            span{
+                font-size: 17px !important;
+            }
+        }
+        .anchor{
+            a:hover{
+                text-decoration: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,49 @@
+
+<div class="container">
+    <h4 class="text-center m-lg-3">Create New Job</h4>
+    <form action="/employer/create-new-job/<%= locals.user.id%>" method="POST">
+        <div class="row border shadow-lg mx-lg-auto p-4">
+            <div class=" offset-lg-2 col-lg-4">
+                <div class="form-group">
+                    <label class="h6" for="exampleInputname1">Company Name</label>
+                    <input type="text" class="form-control" name="companyname" id="exampleInputname1" aria-describedby="nameHelp" placeholder="Company Name">
+                </div>
+                <div class="form-group">
+                    <label class="h6" for="exampleInputname1">Job Title</label>
+                    <input type="text" class="form-control" name="jobtitle" id="exampleInputname1" aria-describedby="nameHelp" placeholder="Job Title">
+                </div>
+                <div class="form-group">
+                    <label class="h6" for="exampleInputname1">Job Location</label>
+                    <input type="text" class="form-control" name="joblocation" id="exampleInputname1" aria-describedby="nameHelp" placeholder="Job Location">
+                </div>
+                <div class="form-group">
+                    <label class="h6" for="exampleInputname1">Salary</label>
+                    <input type="text" class="form-control" name="jobsalary" id="exampleInputname1" aria-describedby="nameHelp" placeholder="Salary (In lack)">
+                </div>
+                <div class="form-group">
+                    <label class="h6" for="aboutyou">Job Description</label>
+                    <textarea class="form-control" rows="2" id="aboutyou" name="jobdescription" placeholder="Details" required></textarea>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label class="h6" for="exampleInputname1">Department</label>
+                    <input type="text" class="form-control" name="jobdepartment" id="exampleInputname1" aria-describedby="nameHelp" placeholder="Department">
+                </div>
+                <div class="form-group">
+                    <label class="h6" for="exampleInputname1">Job status</label>
+                    <input type="text" class="form-control" name="jobstatus" id="exampleInputname1" aria-describedby="nameHelp" placeholder="Job status">
+                </div>
+                <div class="form-group">
+                    <label class="h6" for="exampleInputname1">Experience Required</label>
+                    <input type="text" class="form-control" name="jobexprequire" id="exampleInputname1" aria-describedby="nameHelp" placeholder="Experience Required">
+                </div>
+                <div class="form-group">
+                    <label class="h6" for="exampleInputname1">Job ID</label>
+                    <input type="text" class="form-control" name="jobid" id="exampleInputname1" aria-describedby="nameHelp" placeholder="Job ID">
+                </div>
+                <button type="submit" class="btn ml-5 mt-4 btn-primary">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>

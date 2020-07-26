@@ -1,0 +1,48 @@
+
+
+<div class="container-fluid">
+    <div class="row">
+       
+            <% for( singlejob of job.jobs )  { %>
+            
+                <div class="col-lg-3 mt-3">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-header bg-info text-center ">
+                            <span class="h6"><%= singlejob.jobdepartment%></span>
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title text-capitalize"><%= singlejob.jobtitle %></h5>
+                          <h6 class="card-subtitle mb-2 text-muted"><%= singlejob.joblocation %></h6>
+                          <p class="card-text"><%= singlejob.jobdescription %></p>
+                          <div class="row mb-1">
+                            <div class="col-8">
+                                <span class="d-block font-weight-bold">Experience</span>
+                                <span class="d-block"><%= singlejob.jobexprequire %></span>
+                              </div>
+                              <div class="col-4">
+                                <span class="d-block font-weight-bold">status</span>
+                                <span class="d-block"><%= singlejob.jobstatus %></span>
+                              </div>
+                          </div>
+                          <div class="row mb-1">
+                            <div class="col-8">
+                              <span class="d-block font-weight-bold">Salary</span>
+                              <span class="d-block"><%= singlejob.jobsalary %></span>
+                            </div>
+                            <div class="col-4">
+                              <span class="d-block font-weight-bold">Job ID</span>
+                              <span class="d-block"><%= singlejob.jobid %></span>
+                            </div>
+                        </div>
+                          <a href="#" class="card-link ml-5 pl-5 h6">more</a>
+                        </div>
+                        <div class="card-footer">
+                            3 min ago
+                        </div>
+                      </div>
+                </div>
+              
+            <% } %>
+    
+    </div>
+</div>

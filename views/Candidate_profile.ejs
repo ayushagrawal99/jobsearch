@@ -1,0 +1,131 @@
+<link rel="stylesheet" href="/css/candidate_profile.css">
+
+<div class="cand-profile p-3 d-flex">
+    <div class="cand-l-info m-2 p-2">
+        <div class="cand-img border border-dark">
+            <img src="<%= user.avatar%>" alt="<%= locals.user.name%>">
+        </div>
+        <h5 class="mt-2 text-info">cueent job</h5><hr class="mt-0 ">
+        <div class="cand-sal">
+            <div class="d-flex justify-content-between m-1">
+                <span class="h6">Salery</span>
+                <span>Rs. <%= locals.user.salary%> Lac</span>
+            </div>
+            <div class="d-flex justify-content-between m-1">
+                <span class="h6">Date of Joined</span>
+                <span><%= locals.user.dateofjoining%></span>
+            </div>
+            <div class="d-flex justify-content-between m-1">
+                <span class="h6">Designation</span>
+                <span><%= locals.user.jobtitle%></span>
+            </div>
+            <div class="d-flex justify-content-between m-1">
+                <span class="h6">Location</span>
+                <span><%= locals.user.companylocation%></span>
+            </div>
+            <div class="d-flex justify-content-between m-1">
+                <span class="h6">Company Name</span>
+                <span><%= locals.user.companyname%></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="cand-mid-info p-3">
+        <h3 class=""><%= locals.user.name%></h3>
+        <p class="text-justify"><%= locals.user.aboutyou%></p>
+        
+        <div>
+            <a class=" h6 text-dark mr-3 border-bottom border-bottom-dark " data-toggle="collapse" href="#experience" role="button" aria-expanded="false" aria-controls="experience">
+                Experience
+            </a>
+            <a class=" h6 text-dark mr-3 border-bottom border-bottom-dark" data-toggle="collapse" href="#skills" role="button" aria-expanded="false" aria-controls="skills">
+                Skills
+            </a>
+            <a class=" h6 text-dark mr-3 border-bottom border-bottom-dark" data-toggle="collapse" href="#about" role="button" aria-expanded="false" aria-controls="about">
+                About
+            </a>
+            <div class="collapse show" id="experience">
+                <div class="card card-body">
+                    <ul>
+                        <li class="list-unstyled ml-0">
+                            <div class=" p-2">
+                                <div class="d-flex justify-content-between h6">
+                                    <span><%= locals.user.jobtitle%>, <%= locals.user.companyname%>, <%= locals.user.companylocation%></span>
+                                    <span><%= locals.user.duration%></span>
+                                </div>
+                                <p class="text-justify">enim eiusmod high life accusamus terry fff anim keffiyeh helvetica, craft beer labore wes anderso cred nesciunt sapient</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="collapse" id="skills">
+                <div class="card card-body">
+                    <div class="pl-3">
+                        <p class="text-info">Industry Skills</p>
+                        <ul>
+                            <li>
+                                <span class="d-block h6">skill Name</span>
+                            </li>
+                            <li>
+                                <span class="d-block h6">skill Name</span>
+                            </li>
+                        </ul>
+                        <p class="text-info">Other Skills</p>
+                        <ul>
+                            <li>
+                                <span class="d-block h6">skill Name</span>
+                            </li>
+                            <li>
+                                <span class="d-block h6">skill Name</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="collapse" id="about">
+                <div class="card card-body">
+                    <div class="pl-3">
+                        <p class="text-info">Contact Information</p>
+                        <div class="container-fluid">
+                            <div class="row mt-2">
+                                <div class="col-lg-3 h6">Phone</div>
+                                <div class="col-lg-9"><%= locals.user.phone%></div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-lg-3 h6">Email</div>
+                                <div class="col-lg-9"><%= locals.user.email%></div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-lg-3 h6">Address</div>
+                                <div class="col-lg-9 text-justify"><%= locals.user.address%></div>
+                            </div>
+                        </div>
+                       
+                        <p class="mt-2 text-info">Basic Information</p>
+                        <div class="container-fluid">
+                            <div class="row mt-2">
+                                <div class="col-lg-3 h6">Birthday</div>
+                                <div class="col-lg-9"><%= locals.user.dob%></div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-lg-3 h6">Gender</div>
+                                <div class="col-lg-9"><%= locals.user.gender%></div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-lg-3 h6">Member</div>
+                                <div class="col-lg-9 text-justify"><%= locals.user.createdAt%></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="can-r-info ml-5 border-left">
+        <h6 class="h5 p-2">Resume</h6><hr>
+    </div>
+</div>

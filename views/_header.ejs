@@ -1,0 +1,139 @@
+<link rel="stylesheet" href="/css/_header.css">
+
+<header class="d-flex justify-content-between bg-dark text-white">
+    <div class="d-flex ml-lg-4 ml-sm-5"> 
+        <div class="p-lg-3 p-2 h3">
+            <i id="bar" class="fas fa-bars"></i>
+        </div>
+        <div class="h3 p-lg-3 ml-lg-4 ml-2 p-2 anchor">
+            <a href="/home" class="link-unstyled text-white">LOGO</a>
+        </div>
+    </div>
+    <div class="d-flex mr-lg-4">
+        <div class="h2 mr-lg-2 mt-lg-1 p-lg-2 p-2">
+            <i class="fas fa-envelope"></i>
+        </div>
+        <% if(locals.user) {%>
+            <div class="dropdown show text-white mr-2 mr-lg-5 p-lg-3">
+                <a class="btn btn-dark font-weight-bold  dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas h5 mr-2 fa-user-circle"></i><%= locals.user.name%>
+                </a>
+              
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <a class="dropdown-item" href="/candidate/profile/<%= locals.user.id%>">Profile</a>
+                  <a class="dropdown-item " href=/sign-out>Sign Out</a>
+                </div>
+              </div>
+        <% } else {%>
+                <a class="text-white p-2 mr-4 h4 p-lg-3 mr-lg-3" href="/sign-in-candidate">LOG IN</a>
+        <% }%>
+    </div>
+
+</header>
+
+<% if(locals.user) {%>
+    <% if(locals.user.usertype == 'candidate') {%>
+        <div class="sidebar border border-dark text-dark h-100 float-left ml-1 mt-1 p-4">
+            <div class="navigation">
+                <small>Navigation</small><hr class="mt-0">
+                <a href="/home" class="d-block p-1 pl-2 text-dark">
+                    <i class="mr-lg-2 far h5 fa-address-card"></i>
+                    <span class="h6">Dashboard</span>
+                </a>
+                <a href="/candidate/resume/<%= locals.user.id %>" class="d-block p-1 pl-2 text-dark">
+                    <i class="mr-lg-2 far h5 fa-address-card"></i>
+                    <span class="h6">Resume</span>
+                </a>
+                <a href="" class="d-block p-1 pl-2 text-dark">
+                    <i class="mr-lg-2 far h5 fa-address-card"></i>
+                    <span class="h6">Interview</span>
+                </a>
+                <a href="" class="d-block p-1 pl-2 text-dark">
+                    <i class="mr-lg-2 far h5 fa-address-card"></i>
+                    <span class="h6">offer</span>
+                </a>
+            </div>
+            <div class="navigation">
+                <small>Jobs</small><hr class="mt-0">
+                <a href="" class="d-block p-1 pl-2 text-dark">
+                    <i class="mr-lg-2 far h5 fa-address-card"></i>
+                    <span class="h6">Applied Jobs</span>
+                </a>
+                <a href="" class="d-block p-1 pl-2 text-dark">
+                    <i class="mr-lg-2 far h5 fa-address-card"></i>
+                    <span class="h6">Map Jobs</span>
+                </a>
+                <a href="/candidate/livejob" class="d-block p-1 pl-2 text-dark">
+                    <i class="mr-lg-2 far h5 fa-address-card"></i>
+                    <span class="h6">Live Jobs</span>
+                </a>
+            </div>
+            <div class="navigation">
+                <small>Support</small><hr class="mt-0">
+                <a href="" class="d-block p-1 pl-2 text-dark">
+                    <i class="mr-lg-2 far h5 fa-address-card"></i>
+                    <span class="h6">Help Desk</span>
+                </a>
+                <a href="" class="d-block p-1 pl-2 text-dark">
+                    <i class="mr-lg-2 far h5 fa-address-card"></i>
+                    <span class="h6">Tutorial</span>
+                </a>
+                <a href="" class="d-block p-1 pl-2 text-dark">
+                    <i class="mr-lg-2 far h5 fa-address-card"></i>
+                    <span class="h6">Feedback</span>
+                </a>
+            </div>
+        </div>
+        <% } else if(locals.user.usertype == 'employer') {%>
+            <div class="sidebar border border-dark text-dark h-100 float-left ml-1 mt-1 p-4">
+                <div class="navigation">
+                    <small>Navigation</small><hr class="mt-0">
+                    <a href="/home" class="d-block p-1 pl-2 text-dark">
+                        <i class="mr-lg-2 far h5 fa-address-card"></i>
+                        <span class="h6">Dashboard</span>
+                    </a>
+                    <a href="/employer/create-jobs/<%= locals.user.id%>" class="d-block p-1 pl-2 text-dark">
+                        <i class="mr-lg-2 far h5 fa-address-card"></i>
+                        <span class="h6">Create New Jobs</span>
+                    </a>
+                    <a href="/employer/all-jobs/<%= locals.user.id%>" class="d-block p-1 pl-2 text-dark">
+                        <i class="mr-lg-2 far h5 fa-address-card"></i>
+                        <span class="h6">Jobs</span>
+                    </a>
+                    <a href="" class="d-block p-1 pl-2 text-dark">
+                        <i class="mr-lg-2 far h5 fa-address-card"></i>
+                        <span class="h6">Candidate</span>
+                    </a>
+                    <a href="" class="d-block p-1 pl-2 text-dark">
+                        <i class="mr-lg-2 far h5 fa-address-card"></i>
+                        <span class="h6">Approvels</span>
+                    </a>
+                </div>
+                <div class="navigation">
+                    <small>Support</small><hr class="mt-0">
+                    <a href="" class="d-block p-1 pl-2 text-dark">
+                        <i class="mr-lg-2 far h5 fa-address-card"></i>
+                        <span class="h6">Help Desk</span>
+                    </a>
+                    <a href="" class="d-block p-1 pl-2 text-dark">
+                        <i class="mr-lg-2 far h5 fa-address-card"></i>
+                        <span class="h6">Tutorial</span>
+                    </a>
+                    <a href="" class="d-block p-1 pl-2 text-dark">
+                        <i class="mr-lg-2 far h5 fa-address-card"></i>
+                        <span class="h6">Feedback</span>
+                    </a>
+                </div>
+            </div>
+        <% } %>
+<% } %>
+
+<script>
+        $("#bar").click(function(){
+            $(".sidebar").toggleClass("tglcls");
+        })
+
+        document.getElementById("bar").addEventListener("click", function(){
+            document.getElementsByClassName("sidebar").classList.toggle("tglcls");
+        })
+</script>
